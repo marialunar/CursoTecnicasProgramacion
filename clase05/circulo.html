@@ -1,0 +1,63 @@
+<script>
+
+    radio = parseFloat(prompt("Ingrese el Radio del Circulo"))
+    document.writeln("Radio: "+radio + "<br>")
+   
+    perimetro= Math.PI*radio*2
+    document.writeln("Perimetro: "+perimetro.toFixed(2)+"<br>")
+
+    //area= Math.PI*Math.pow(radio,2)
+    area= Math.PI * radio ** 2
+    document.writeln("Area: "+area.toFixed(2)+"<br>")
+
+    /*Operadores Logicos
+    
+    Operador    Simbolo
+    ==          comparacion
+    !=          distinto
+    !           negacion
+    < <= >= >   comparacion numerica
+    &&          AND
+    ||          OR
+
+    Tablas de Verdad
+    x   Y   OR  AND
+    F   F   F   F
+    F   V   V   F
+    V   F   V   F       
+    V   V   V   V
+    
+    */
+
+    log1=true
+    log2=false
+    nro1=5
+    nro2=7
+
+    document.writeln((log1 || log2)+"<br>")
+    document.writeln((log1 && log2)+"<br>")
+
+    llueve=true
+    tengoPlata=false
+
+    document.writeln("Salimos: "+(!llueve && tengoPlata)+"<br>")
+
+    document.writeln((nro1<=10 && nro2>=nro1)+ "<br>")
+    document.writeln(!(nro1<=10 && nro2>=nro1)+ "<br>")
+
+    document.writeln((log1)+"<br>")
+    document.writeln((!log1)+"<br>")
+    document.writeln((!!log1)+"<br>")
+    document.writeln((!!!log1)+"<br>")
+    document.writeln((!!!!log1)+"<br>")
+
+
+
+
+
+
+
+
+</script>
+
+

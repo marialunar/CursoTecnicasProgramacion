@@ -1,0 +1,76 @@
+<script>
+//Fecha y Hora
+    //fecha = new Date(new Date("March 23,2025 23:15:30"))
+    fecha = new Date()
+
+    document.writeln(fecha.getDate()+"<br>")
+    document.writeln(fecha.getDay()+"<br>")
+    document.writeln(fecha.getMonth()+"<br>")
+    document.writeln(fecha.getYear() + 1900+"<br>")
+    document.writeln(fecha.getHours()+"<br>")
+    document.writeln(fecha.getMinutes()+"<br>")
+    document.writeln(fecha.getSeconds()+"<br>")
+
+    zona=Intl.DateTimeFormat().resolvedOptions().timeZone
+    zona=zona.replace("_"," ")
+    document.writeln(zona+"<br>")
+    zona=zona.replace("_"," ")
+    document.writeln(zona+"<br>")
+    Zona=zona.replace("/"," ")
+    document.writeln(zona+"<br>")
+
+    //Operadores
+
+    nro1=8
+    nro2=5
+    document.writeln("nro1="+nro1+"<br>")
+    document.writeln("nro2="+nro2+"<br>")
+
+    nro1=nro2
+
+
+
+    //operadores incrementales
+
+    //sumar 1 a nro1 ++ 
+    nro1++
+    document.writeln("nro1="+nro1+"<br>")
+
+    //restar
+    nro1--
+    document.writeln("nro1="+nro1+"<br>")
+
+    //sumar 5 a nro1
+    nro1+=5
+    document.writeln("nro1="+nro1+"<br>")
+
+    //restar
+    nro1-=5
+    document.writeln("nro1="+nro1+"<br>")
+
+    //multiplicar * 5 nro1
+    nro1*=5
+    document.writeln("nro1="+nro1+"<br>")
+
+    //dividir por 5 nro1
+    nro1/=5
+    document.writeln("nro1="+nro1+"<br>")
+
+    //constantes
+    const PI=3.14
+    //PI++     ERROR una constante no puede cambiar su valor
+
+    //Precedencia y Procedencia de operadores ++ --
+
+    document.writeln(nro1++ +"<br>")  //5
+    document.writeln("nro1="+nro1+"<br>")
+    document.writeln(++nro1 +"<br>") //7
+    document.writeln("nro1="+nro1+"<br>")
+
+    //TODO Operadores Logicos
+
+
+
+
+
+</script>

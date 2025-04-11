@@ -1,0 +1,116 @@
+<script src="util.js"></script>
+<script>
+    frase="Hoy es "
+
+    fecha=new Date()
+
+    diaSem=fecha.getDay()
+    if (diaSem==0) frase+="Domingo "
+    if (diaSem==1) frase+="Lunes "
+    if (diaSem==2) frase+="Martes "
+    if (diaSem==3) frase+="Miercoles "
+    if (diaSem==4) frase+="Jueves "
+    if (diaSem==5) frase+="Viernes "
+    if (diaSem==6) frase+="Sabado "
+
+    diaMes=fecha.getDate()
+    frase+=diaMes+" "
+
+    mes=fecha.getMonth()
+    if (mes==0) frase+="de Enero "
+    if (mes==1) frase+="de Febrero "
+    if (mes==2) frase+="de Marzo "
+    if (mes==3) frase+=" de Abril del año 2025 "
+    if (mes==4) frase+="de Mayo "
+    if (mes==5) frase+="de Junio "
+    if (mes==6) frase+="de Julio "
+    if (mes==7) frase+="de Agosto "
+    if (mes==8) frase+="de Septiembre "
+    if (mes==9) frase+="de Octubre "
+    if (mes==10) frase+="de Noviembre "
+    if (mes==11) frase+="de Diciembre "
+
+    zonaHoraria=Intl
+                    .DateTimeFormat()
+                    .resolvedOptions()
+                    .timeZone
+
+    zonaHoraria=zonaHoraria.replace("/"," ")
+    zonaHoraria=zonaHoraria.replace("_"," ")
+    frase+=", en " + zonaHoraria
+    
+    temperatura=getTemperatura()
+    clima=getClima()
+
+    frase+=" la temperatura es "+ 
+            temperatura+
+            " grados centigrados, "
+    frase+=" el tiempo es hay " + clima + ", "
+    if (temperatura<=5)                     frase+="Hay Frio Polar"
+    if (temperatura>5 && temperatura<=10)   frase+="Hay Frio"
+    if (temperatura>10 && temperatura<=15)   frase+="Está Fresco"
+    if (temperatura>15 && temperatura<=25)   frase+="Está Agradable"
+    if (temperatura>25 && temperatura<=30)   frase+="Hace Calor"
+    if (temperatura>30)                      frase+="Está muy Caluroso"
+
+
+    hora= fecha.getHours()
+    momento=" "
+    frase +=" Es Momento de " + momento + " "
+
+    
+    if (hora<=6)                    frase+="Despertar"
+    if (hora>=7 && hora <= 8)        frase+="Desayunar"
+    if (hora>=13 && hora <= 14)      frase+="Almorzar"
+    if (hora>=15 && hora <= 16)      frase+="Dormir la siesta"
+    if (hora>=16 && hora <= 17)      frase+="Merendar"
+    if (hora>=19 && hora <= 20)      frase+="Cenar"
+    if (hora>=21 && hora <= 22)      frase+="Ver series"
+    if (hora>=23 && hora <= 24)      frase+="Dormir"
+    
+
+/*
+    frase +=" La Estacion del Año Es " 
+
+    if (mes<=0 && mes <=3) frase+="Verano "
+    if (mes<=4 && mes <=6) frase+="Otoño "
+    if (mes>=7 && mes <=9) frase+="Invierno "
+    if (mes>=10 && mes <=12) frase+="Primavera "
+    
+*/
+ 
+if (mes==0 || mes==1) frase+=" La Estacion del Año es Verano"
+if (mes==3 || mes==4) frase+=" La Estacion del Año es Otoño"
+if (mes==6 || mes==7) frase+=" La Estacion del Año es Invierno"
+if (mes==9 || mes==10) frase+=" La Estacion del Año es Primavera"
+if (mes==2 && diaMes<21) frase+=" La Estacion del Año es Verano"
+if (mes==2 && diaMes>=21) frase+=" La Estacion del Año es Otoño"
+if (mes==5 && diaMes<21) frase+=" La Estacion del Año es Otoño"
+if (mes==5 && diaMes>=21) frase+=" La Estacion del Año es Invierno"
+if (mes==8 && diaMes<21) frase+=" La Estacion del Año es Invierno"
+if (mes==8 && diaMes>=21) frase+=" La Estacion del Año es Primavera"
+if (mes==11 && diaMes<21) frase+=" La Estacion del Año es Primavera"
+if (mes==11 && diaMes>=21) frase+=" La Estacion del Año es Verano"
+    
+
+
+    /*
+        Imprimir la opcion correcta usando if
+        - Es momento de despertar
+        - Es de desayunar
+        - Es de almorzar
+        - Es de dormir la siesta
+        - Es de merendar
+        - Es de cenar
+        - Es de ver series
+        - Es de dormir
+
+        Informar estacion del año
+
+ 
+    */
+
+
+    document.writeln(frase)
+    hablar(frase)
+</script>

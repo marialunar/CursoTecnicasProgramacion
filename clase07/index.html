@@ -1,0 +1,53 @@
+<script src="util.js"></script>
+<script>
+    document.writeln("-- clase 06 -- <br>")
+    nro1 = 5
+    log1 = true
+    temperatura = getTemperatura()
+    clima = getClima()
+
+    document.writeln("temperatura: " + temperatura + "<br>")
+    document.writeln("clima: " + clima + "<br>")
+
+    //ESTRUCTURA CONDICIONAL IF
+    if (log1) {
+        document.writeln("Verdad1 <br>")
+
+    }
+    if (log1 == true) {
+        document.writeln("Verdad2 <br>")
+        //código indentado
+    }
+
+    if (clima.includes("lluvia ligera")){
+        document.writeln("Usar Paraguas <br>")
+    }
+
+    if (temperatura<=18){
+        document.writeln("Hace Frio <br>")
+        document.writeln("Usar Abrigo <br>")
+    }
+
+    //Modo Uso de llaves
+    //Recomendado por Microsft o educativa
+
+    if (log1)
+    {
+        document.writeln("Verdad3 <br>")  
+    }
+
+    //Modo de Uso Abreviado
+
+    if(log1) document.writeln("Verdad4 <br>")
+
+
+
+
+
+
+
+
+    /*else
+        document.writeln("Falso1 <br>")*/
+
+</script>

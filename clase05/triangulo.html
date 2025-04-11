@@ -1,0 +1,45 @@
+
+<script>
+    base = parseFloat(prompt("Ingrese Base del Triangulo"))
+    document.writeln("Base: "+base + "<br>")
+    altura = parseFloat(prompt("Ingrese la Altura del Triangulo"))
+    document.writeln("Altura: "+altura + "<br>")
+
+    area= (base*altura)/2
+    document.writeln("Area: "+area+"<br>")
+
+    //perimetro= base+altura+Math.sqrt(Math.pow(base,2)+Math.pow(altura,2))
+    perimetro=base+altura+Math.hypot(base,altura)
+    document.writeln("Perimetro: "+perimetro.toFixed(2)+"<br>")
+/*
+    
+    Trabajo 2
+Crear el  archivo triangulo.html
+el usuario debe ingresar (prompt) 2 valores correspóndientes a 
+el base y altura del triangulo
+calcular e imprimir (document.writeln) el perímetro del triangulo
+calcular e imprimir (document.writeln) el área (superficie) del triangulo
+    
+    ladoa = parseFloat(prompt("Ingrese Lado A del Triangulo"))
+    document.writeln("Lado A: "+ladoa + "<br>")
+    ladob = parseFloat(prompt("Ingrese Lado A del Triangulo"))
+    document.writeln("Lado B: "+ladob + "<br>")
+    ladoc = parseFloat(prompt("Ingrese Lado A del Triangulo"))
+    document.writeln("Lado C: "+ladoc + "<br>")
+    
+    perimetro= ladoa+ladob+ladoc
+    document.writeln("Perimetro: "+perimetro+"<br>")
+    
+    Trabajo 3
+Crear el  archivo circulo.html
+el usuario debe ingresar (prompt) 1 valor correspóndientes a 
+al radio del circulo
+calcular e imprimir (document.writeln) el perímetro del circulo
+calcular e imprimir (document.writeln) el área (superficie) del circulo
+    
+*/
+
+
+
+    
+</script>

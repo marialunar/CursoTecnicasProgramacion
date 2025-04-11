@@ -1,0 +1,24 @@
+<script src="util.js"></script>
+<script>
+    document.writeln("Hola Mundo!!!<br>")
+    hablar("Hola Mundo!!!")
+
+    nombre = prompt("Ingrese su Nombre")
+    document.writeln("Hola " + nombre + "<br>")
+    hablar("Hola " + nombre)
+
+    //temperatura = 25
+    temperatura = getTemperatura()
+    hablar("La temperatura es " + temperatura + "grados centígrados")
+    document.writeln("La temperatura es " + temperatura + " grados centígrados <br>")
+
+    clima = getClima()
+    hablar("El clima es " + clima)
+    document.writeln("El Clima es " + clima + "<br>")
+
+    frase = getFraseRandom()
+    hablar(frase)
+
+    hablar(getFecha())
+    hablar(hoyEs())
+</script>
