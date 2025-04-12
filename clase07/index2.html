@@ -79,7 +79,7 @@
     
 */
  
-if (mes==0 || mes==1) frase+=" La Estacion del Año es Verano"
+/*if (mes==0 || mes==1) frase+=" La Estacion del Año es Verano"
 if (mes==3 || mes==4) frase+=" La Estacion del Año es Otoño"
 if (mes==6 || mes==7) frase+=" La Estacion del Año es Invierno"
 if (mes==9 || mes==10) frase+=" La Estacion del Año es Primavera"
@@ -91,8 +91,31 @@ if (mes==8 && diaMes<21) frase+=" La Estacion del Año es Invierno"
 if (mes==8 && diaMes>=21) frase+=" La Estacion del Año es Primavera"
 if (mes==11 && diaMes<21) frase+=" La Estacion del Año es Primavera"
 if (mes==11 && diaMes>=21) frase+=" La Estacion del Año es Verano"
-    
+*/   
 
+
+if((mes==11 && diaMes>=21)|| mes==0 || mes==1 || (mes==2 && diaMes<21))
+    frase+=" La Estacion del Año es Verano"
+if((mes==2 && diaMes>=21)|| mes==3 || mes==4 || (mes==5 && diaMes<21))
+    frase+=" La Estacion del Año es Otoño"
+if((mes==5 && diaMes>=21)|| mes==6 || mes==7 || (mes==8 && diaMes<21))
+    frase+=" La Estacion del Año es Invierno"
+if((mes==8 && diaMes>=21)|| mes==9 || mes==10 || (mes==11 && diaMes<21))
+    frase+=" La Estacion del Año es Primavera"
+
+
+
+if (clima.includes("lluv") || clima.includes("lluv"))
+    frase+="salir con Paraguas"
+if (temperatura>28 && clima.includes("sol"))
+    frase+="cuidado con la radiacion solar"
+
+if (diaSem==0 || diaSem==6)     frase+=" Hoy es dia de Desacnsar"
+if (diaSem==1)                  frase+=" Odio los Lunes porque hay que ir al trabajo"
+if (diaSem==2 || diaSem==3)     frase+=" Hoy hay que trabajar"
+if (diaSem==5)                  frase+=" Hoy es viernes y tu cuerpo lo sabe"
+
+frase+=" , "+getFraseRandom()
 
     /*
         Imprimir la opcion correcta usando if
