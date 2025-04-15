@@ -1,0 +1,108 @@
+<!--<script src="util.js"></script>-->
+<script src="https://crios2020.github.io/js/util.js"></script>
+
+<script>
+    document.writeln("-- clase 06 -- <br>")
+    nro1 = 5
+    log1 = true
+    temperatura = getTemperatura()
+    clima = getClima()
+
+    document.writeln("temperatura: " + temperatura + "<br>")
+    document.writeln("clima: " + clima + "<br>")
+
+    //ESTRUCTURA CONDICIONAL IF
+    if (log1) {
+        document.writeln("Verdad1 <br>")
+
+    }
+    if (log1 == true) {
+        document.writeln("Verdad2 <br>")
+        //código indentado
+    }
+
+    if (clima.includes("lluvia ligera")){
+        document.writeln("Usar Paraguas <br>")
+    }
+
+    if (temperatura<=18){
+        document.writeln("Hace Frio <br>")
+        document.writeln("Usar Abrigo <br>")
+    }
+
+    //Modo Uso de llaves
+    //Recomendado por Microsft o educativa
+
+    if (log1)
+    {
+        document.writeln("Verdad3 <br>")  
+    }
+
+    //Modo de Uso Abreviado
+
+    if(log1) document.writeln("Verdad4 <br>")
+
+    //Estructura if-else
+
+    if (log1){
+        document.writeln("verdad5 <br>")
+    }
+    else{
+        document.writeln("falso6 <br>")
+    }
+    llueve=false
+
+    if(llueve){
+        document.writeln("Usar Paraguas <br>")
+    }
+    else{
+        document.writeln("No usar Paraguas <br>")
+    }
+
+//Estructura Switch
+
+nro1=25
+switch(nro1){
+    case 1: document.writeln("valor1<br>");break
+    case 2: document.writeln("valor2<br>");break
+    case 3: document.writeln("valor3<br>")
+    case 4: document.writeln("valor4<br>")
+    case 5: document.writeln("valor5<br>");break
+    case 6: case 7: case 8: case 9: case 10:
+        document.writeln("valor entre 6 y 10 <br>"); break
+       
+    case 11: document.writeln("valor11<br>");break
+    case 12: document.writeln("valor12<br>");break 
+    default: document.writeln("valor no esperado <br>")
+}
+
+writeln("Hola")
+writeln("Hoy el Lunes")
+writeln("Lunes")
+writeln("Martes <br>")
+
+writeln("Temperatura: "+ getTemperatura())
+writeln("Zona: "+ getZona())
+writeln("Continente: "+ getContinente())
+writeln("Pais: "+ getPais())
+writeln("Provincia: "+ getProvincia())
+writeln("Ciudad: "+ getCiudad())
+writeln("Llueve: "+getLlueve())
+
+if (getLlueve()){
+    writeln("Usar Paraguas!")
+}
+
+
+
+
+
+
+
+
+
+
+    /*else
+        document.writeln("Falso1 <br>")*/
+
+</script>
