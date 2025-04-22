@@ -1,0 +1,92 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+
+    //Ejercicio 1
+    //Dado el siguiente código:
+    //nro1 = 100
+    //nro2 = 500
+    //nro3 = 250;
+    //Informar cuál de los tres números es mayor.
+    //No hay números iguales
+
+    nro1=100
+    nro2=500
+    nro3=250   
+
+if (nro1 > nro2 && nro1 > nro3) {
+    document.writeln("El número mayor es nro1: " + nro1 +"<br>");
+}
+if (nro2 > nro1 && nro2 > nro3) {
+    document.writeln("El número mayor es nro2: " + nro2 +"<br>");
+}
+ else {
+    document.writeln("El número mayor es nro3: " + nro3 +"<br>");
+}
+
+/*
+if (nro1>nro2 && nro1>nro3) writeln("nro1 es el mayor")
+if (nro2>nro1 && nro2>nro3) writeln("nro2 es el mayor")
+if (nro3>nro1 && nro3>nro2) writeln("nro3 es el mayor")
+*/
+
+    //Ejercicio 2
+    //A partir del siguiente código:
+    //a=10
+    //b=-2
+    //c=5;
+    //siempre hay 2 números positivos y 1 negativo.
+    //Informar la multiplicación de los dos números positivos.
+
+
+    a=10
+    b=-2
+    c=5
+    
+   if (a<0) writeln(b*c)
+   if (b<0) writeln(a*c)
+   if (c<0) writeln(a*b)
+
+   /*
+
+// Identificamos los números positivos
+if (a > 0 && c > 0) 
+{
+    document.writeln("La multiplicación de los dos números positivos es: " + (a * c));
+}
+   */
+
+    //Ejercicio 3
+    //Tomando el siguiente código:
+    //usuario = "Pepito"
+    //clave = "1234"
+    //Informar los siguientes casos:
+    //1. Si el usuario es ”pepito” y la clave es ”1234” informar “¡Bienvenido pepito!”.
+    //2. Si el usuario es ”pepito” y la clave no es “1234” informar “Contraseña incorrecta”.
+    //3. Si el usuario no es “pepito” y la clave es “1234” informar “Usuario incorrecto”.
+    
+    usuario = "pepito"
+    clave = "1234"
+
+if (usuario=="pepito"&& clave=="1234") 
+document.writeln("<br>Bienvenido Pepito")
+if (usuario=="pepito"&& clave!="1234") 
+document.writeln("<br>Contraseña incorrecta")
+if (usuario!="pepito"&& clave=="1234") 
+document.writeln("<br>Usuario incorrecto")
+
+/*
+usuario = "Pepito";
+clave = "1234";
+
+// Convertimos el usuario a minúsculas para hacer la comparación sin importar mayúsculas o minúsculas.
+if (usuario.toLowerCase() === "pepito" && clave === "1234") {
+    document.writeln("¡Bienvenido pepito!");
+} else if (usuario.toLowerCase() === "pepito" && clave !== "1234") {
+   document.writeln("Contraseña incorrecta.");
+} else if (usuario.toLowerCase() !== "pepito" && clave === "1234") {
+    document.writeln("Usuario incorrecto.");
+} else {
+    document.writeln("Usuario y contraseña incorrectos.");
+}*/
+
+</script>
