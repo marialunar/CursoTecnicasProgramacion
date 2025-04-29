@@ -1,0 +1,34 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+//Ejercicio 3
+    //Tomando el siguiente código:
+    //usuario = "Pepito"
+    //clave = "1234"
+    //Informar los siguientes casos:
+    //1. Si el usuario es ”pepito” y la clave es ”1234” informar “¡Bienvenido pepito!”.
+    //2. Si el usuario es ”pepito” y la clave no es “1234” informar “Contraseña incorrecta”.
+    //3. Si el usuario no es “pepito” y la clave es “1234” informar “Usuario incorrecto”.
+    
+    usuario = prompt("Ingrese Usuario")
+    clave = prompt("Ingrese su Clave")
+    //document.writeln("usuario: " + usuario+)
+    //document.writeln("clave: " + clave+)
+/*
+    if (usuario=='pepito'){
+        if (clave=='1234'){
+            document.writeln("Bienvenido Pepito")
+        } else{ 
+            document.writeln("Clave Incorrecta")
+        }
+    } else{
+        document.writeln("Usuario Incorrecto")
+    }*/
+
+if (usuario=="pepito"&& clave=="1234") 
+document.writeln("<br>Bienvenido Pepito")
+if (usuario=="pepito"&& clave!="1234") 
+document.writeln("<br>Contraseña incorrecta")
+if (usuario!="pepito"&& clave=="1234") 
+document.writeln("<br>Usuario incorrecto")
+
+</script>
