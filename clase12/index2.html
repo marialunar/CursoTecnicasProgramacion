@@ -1,0 +1,121 @@
+<!--<script src="util.js"></script>-->
+<script src="https://crios2020.github.io/js/util.js"></script>
+
+<script>
+ // Estrucutura While
+
+writeln("-- Inicio de Estrucutura While --")
+a=1
+while(a<=10){
+    writeln(a)
+    a++
+}
+writeln("-- Fin de Estrucutura While --")
+writeln(a)
+
+//Estructura For
+
+writeln("-- Inicio de Estrucutura For --")
+
+for (a=1; a<=10; a++){
+    writeln(a) 
+}
+writeln("-- Fin de Estrucutura For --")
+writeln(a)
+
+//Uso de llaves recomendado para Js y Java
+for (a=1; a<=10; a++){
+    writeln(a) 
+}
+//Uso de llaves recomendado Por Microsoft y Educacion
+for (a=1; a<=10; a++)
+{
+    writeln(a) 
+}
+//Uso de llaves abreviado
+for (a=1; a<=10; a++) writeln(a) 
+
+//Recorrido con variable global
+writeln("---------------------------------------------")
+for(;a<=20;a++){
+    writeln(a)
+}
+writeln("---------------------------------------------")
+writeln(a)
+writeln("---------------------------------------------")
+for(;a<=30;a++){
+    writeln(a)
+}
+
+//Recorrido con Multiples variables de control
+for(r=1, s=1; r<=5 && s<=10; r++, s++){
+    writeln(r+" - "+s)
+}
+
+for(r=1, s=1; r<=5 || s<=10; r++, s++){
+    writeln(r+" - "+s)
+}
+
+//For Anidado
+cont=1
+for(r=1; r<=10; r++){
+    for(s=1; s<=10; s++){
+        for(x=1; x<=10; x++){
+            writeln(r+" - "+s+" - "+x+" - "+cont)
+            cont++
+        }
+    }
+}
+
+//Horas del Reloj
+writeln("-- Inicio Horas del Reloj --")
+for(hora=0; hora<24; hora++){
+    for(minuto=0; minuto<60; minuto++){
+        for(segundo=0; segundo<60; segundo++){
+            writeln(hora.toString().padStart(2,"0")+" : "+
+            minuto.toString().padStart(2,"0")+" : "+
+            segundo.toString().padStart(2,"0"))
+            
+        }
+    }
+}
+
+//Loop Infinito
+/*
+for(;;){
+    writeln(a)
+}
+
+for(a=1; ;a++){
+    writeln(a)
+}
+
+for(a=1; true ;a++ ){
+    writeln(a)
+}
+
+for(a=1; a<=10 || true ;a++){
+    writeln(a)
+}
+
+for(a=1; a<=10 || a>=1 ;a++){
+    writeln(a)
+}
+
+for(a=1; a<=10 || true ;){
+    writeln(a)
+}
+
+b=2
+for(a=b; a<=10 ; b++){
+    writeln(a)
+}
+
+b=2
+for(a=b; b<=10 ; a++){
+    writeln(a)
+}
+
+*/
+
+</script>
