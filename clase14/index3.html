@@ -1,0 +1,115 @@
+<!--<script src="util.js"></script>-->
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    frase="Hoy es "
+
+    fecha=new Date()
+
+    diaSem=fecha.getDay()
+
+   semana=["Domingo", "Lunes", "Martes","Miercoles", "Jueves", "Viernes", "Sábado"]
+
+   frase+=" "+semana[diaSem]+" "
+
+
+    diaMes=fecha.getDate()
+    frase+=diaMes+" "
+
+    mes=fecha.getMonth()
+    
+    meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
+           "Septiembre","Octubre","Noviembre","Diciembre"]
+    
+    frase+=" "+meses[mes]+" "
+
+
+    zonaHoraria=Intl
+                    .DateTimeFormat()
+                    .resolvedOptions()
+                    .timeZone
+
+    zonaHoraria=zonaHoraria.replace("/"," ")
+    zonaHoraria=zonaHoraria.replace("_"," ")
+    frase+=", en " + zonaHoraria
+    
+    temperatura=getTemperatura()
+    clima=getClima()
+
+    frase+=" la temperatura es "+ 
+            temperatura+
+            " grados centigrados, "
+    frase+=" el tiempo es hay " + clima + ", "
+
+    if (temperatura<=5)                     frase+="Hay Frio Polar"
+    if (temperatura>5 && temperatura<=10)   frase+="Hay Frio"
+    if (temperatura>10 && temperatura<=15)  frase+="Está Fresco"
+    if (temperatura>15 && temperatura<=25)  frase+="Está Agradable"
+    if (temperatura>25 && temperatura<=30)  frase+="Hace Calor"
+    if (temperatura>30)                     frase+="Está muy Caluroso"
+
+    hora= fecha.getHours()
+    momento= " "
+    frase +=" Es Momento de " + momento + " "
+
+    momentos=["Dormir","Dormir","Dormir","Dormir","Dormir","Despertar","Desayunar",,"Desayunar","Trabajar", ,"Trabajar",
+    "Trabajar","Trabajar","Almorzar","Almorzar","Dormir la Siesta","Merendar", "Merendar","Cenar", "Cenar","Cenar",
+    "Ver Series", "Dormir","Dormir"]
+    
+    frase+=" "+momentos[hora]+" "
+
+
+switch(mes){
+case 0:  case 1:
+frase +=" La Estacion del Año Es Verano";               break 
+case 3: case 4: 
+frase +=" La Estacion del Año Es Otoño";                break
+case 6: case 7: 
+frase +=" La Estacion del Año Es Invierno";             break  
+case 9: case 10:        
+frase +=" La Estacion del Año Es Primavera";            break
+case 2:
+    if(dia<21) 
+    frase +=" La Estacion del Año Es Verano"
+    else            
+frase +=" La Estacion del Año Es Otoño";                break
+
+case 5:
+    if(dia<21) 
+    frase +=" La Estacion del Año Es Otoño"
+    else            
+frase +=" La Estacion del Año Es Invierno";                break
+
+case 8:
+    if(dia<21) 
+    frase +=" La Estacion del Año Es Invierno"
+    else            
+frase +=" La Estacion del Año Es Primavera";                break
+
+case 11:
+    if(dia<21) 
+    frase +=" La Estacion del Año Es Primavera"
+    else            
+frase +=" La Estacion del Año Es Verano";                break
+}   
+    
+
+
+if (clima.includes("lluv") || clima.includes("lluv"))
+    frase+="salir con Paraguas"
+if (temperatura>28 && clima.includes("sol"))
+    frase+="cuidado con la radiacion solar"
+
+
+    laboral=["Hoy es dia de Descansar","Odio los Lunes porque hay que ir al trabajo","Hoy hay que trabajar","Hoy hay que trabajar",
+    "Hoy es viernes y tu cuerpo lo sabe","Hoy es dia de Descansar"]
+
+    frase+=" "+laboral[diaSem]+" "
+
+
+frase+=" , "+getFraseRandom()
+
+
+
+    document.writeln(frase)
+    hablar(frase)
+</script>

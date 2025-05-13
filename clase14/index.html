@@ -1,0 +1,150 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+
+<script>
+ //manda fruta
+/*
+ for (a=1; a<=12; a++){
+    frase=getFraseRandom()
+    writeln(frase)
+    hablar(frase)
+ }
+*/
+// Hablar hasta que llueva
+/*
+while (!getLlueve()){
+    frase=getFraseRandom()
+    writeln(frase)
+}
+*/
+
+//hablar hasta que una frase contenga la palabra perro
+/*frase=getFraseRandom()
+while(!frase.toLowerCase().includes("perro")){
+    writeln(frase)
+    frase=getFraseRandom()
+}
+*/
+/*
+do{
+    frase=getFraseRandom()
+    writeln(frase)
+}
+while(!frase.toLowerCase().includes("perro"))
+*/
+
+//Vectores - Arreglos - Arrays
+//Declaracion
+
+numeros=[]
+nombres=[]
+
+//Carga de valores
+
+numeros[0]=1
+nombres[0]="Juan"
+numeros[1]=2
+nombres[1]="Valeria"
+numeros[2]=3
+nombres[2]="Javier"
+numeros[3]=4
+nombres[3]="Mirtha"
+
+/*
+numeros     nombres     indices
+    1       Juan            0
+    2       Valeria         1
+    3       Javier          2
+    4       Mirtha          3
+*/
+
+writeln(numeros[2]+" "+nombres[2])
+writeln(numeros[6]+" "+nombres[6])
+
+writeln("-----------------------------")
+for (a=0; a<4; a++){
+    writeln(numeros[a]+ " "+ nombres[a])
+}
+
+//Uso de length
+writeln("Longitud: "+numeros.length)
+
+//Recorrido del vector usando length
+for (a=0; a<numeros.length; a++){
+    writeln(numeros[a]+" "+nombres[a])
+}
+
+// Recorrido usando while
+writeln("-----------------------------")
+a=0
+while(a<numeros.length){
+    writeln(numeros[a]+" "+ nombres[a])
+    a++
+}
+
+//Recorrido inverso
+writeln("-----------------------------")
+for(a=numeros.length-1; a>=0; a--){
+    writeln(numeros[a]+" "+ nombres[a])
+}
+
+// Declaracion abreviada
+writeln("-----------------------------")
+semana=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"]
+for (a=0; a<semana.length; a++){
+    writeln(semana[a])
+}
+
+//TODO publicar TP
+//TODO mejorar fecha y hora
+//TODO arrays numericos
+
+//arrays numericos
+writeln("-----------------------------")
+vector=[10,23,26,29,38,39,46,10,65,10,12,13,7,10,45]
+writeln("longitud vector: "+vector.length)
+
+//totalizar un vector
+//promediar un vector
+writeln("-----------------------------")
+sumar=0
+for(a=0; a<vector.length; a++){
+    sumar+=vector[a]
+}
+writeln("Total: "+(sumar))
+writeln("Promedio: "+(sumar/vector.length).toFixed(2))
+
+//Calcular valor Maximo y Minimo
+writeln("-----------------------------")
+
+max=vector[0]
+min=vector[0]
+
+for(a=0; a<vector.length; a++){
+    if(max<vector[a]) max=vector[a]
+    if(min>vector[a]) min=vector[a]
+}
+writeln("Valor Máximo: "+max)
+writeln("Valor Mínimo: "+min)  
+
+//Contar cantidad de numeros Pares
+//Contar cantidad de numeros Impares
+//Contar cantidad de numeros 10
+writeln("-----------------------------")
+
+contPares=0
+contImpares=0
+cont10=0
+
+for(a=0; a<vector.length; a++){
+    if (vector[a]%2==0) contPares++
+    else                contImpares++
+    if (vector[a]==10)  cont10++
+}
+writeln("Cantidad Numeros Pares: "+contPares)
+writeln("Cantidad Numeros Impares: "+contImpares)
+writeln("Cantidad de 10: "+cont10)  
+
+
+
+
+</script>
