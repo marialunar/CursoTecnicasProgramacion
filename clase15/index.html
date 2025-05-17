@@ -1,0 +1,58 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+
+    //Ejercicio 3
+   
+    usuarios = ["Pepito", "Ana", "Jose", "Maria"]
+    claves = ["1234", "4321", "abc", "1111"]
+    //Informar los siguientes casos:
+    //1. Si el usuario es ”pepito” y la clave es ”1234” informar “¡Bienvenido pepito!”.
+    //2. Si el usuario es ”pepito” y la clave no es “1234” informar “Contraseña incorrecta”.
+    //3. Si el usuario no es “pepito” y la clave es “1234” informar “Usuario incorrecto”.
+    
+    usuario=prompt("Ingrese su nombre de Usuario: ")
+    clave=prompt("Ingrese su clave: ")
+    //writeln("usuario: "+usuario)
+    //writeln("clave: "+clave)
+
+    existe=false
+    donde=0
+    for(a=0; a<usuarios.length; a++){
+        if (usuario==usuarios[a]){
+            existe=true
+            donde=a
+            break
+        }
+    }
+
+    if (existe && clave==claves[donde])
+        writeln("Bienvenido "+usuario)
+    if (existe&& clave!=claves[donde])
+        writeln("Clave Incorrecta")
+    if (existe)
+        writeln("Usuario Incorrecto")
+
+
+/*
+    if(usuario=="pepito" && clave=="1234")  
+                        writeln("Bienvenido Pepito")
+    if(usuario=="pepito" && clave!="1234")  
+                        writeln("Clave incorrecta")
+    if(usuario!="pepito")                   
+                        writeln("Usuario incorrecto") 
+
+    /*
+    if(usuario=="pepito"){
+        if(clave=="1234"){
+            writeln("Bienvenido Pepito")
+        }else{
+            writeln("Clave incorrecta")
+        }
+    }else{
+        writeln("Usuario incorrecto")
+    }
+    */
+
+</script>
+
+    
