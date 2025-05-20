@@ -1,0 +1,80 @@
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script>
+    print("------ Ejercicio 1 --------")
+vector=[10,20,5,15,30,20]
+
+print("Informar el Vector de la forma: Indice X, Valor Y")
+for(a=0; a<vector.length; a++){
+    print("Indice: "+a+", Valor: "+vector[a])
+}
+print("Longitud del Vector: "+vector.length)
+
+print("Totalizar el Vector e Informar el Total")
+sumar=0
+for(a=0; a<vector.length; a++){
+    sumar+=vector[a]
+}
+print("Total del Vector: "+sumar)
+
+print("Informar el contenido de las posiciones Impares")
+for(a=0; a<vector.length; a++){
+    if (a%2!=0) print(vector[a])
+}
+
+print("Informar el mayor numero")
+
+max=vector[0]
+
+for(a=0; a<vector.length; a++){
+    if(max<vector[a]) max=vector[a]
+}
+print("Valor Máximo: "+max)
+
+
+print("Informar cuantas veces aparece el numero 20")
+cont20=0
+
+for(a=0; a<vector.length; a++){
+    if (vector[a]==20)  cont20++
+}
+print("El Numero 20 aparece: "+cont20+" veces")  
+
+print("------ Ejercicio 2 --------")
+inflacion=[0.8, 0.1, 0.3, 0.4, 0.3, 0.6, 0.5, 0.3, 0.7, 0.3, 0.2, 0.9]
+print("Informar la Inflación Anual")
+inflacionAnual=0
+for(a=0; a<inflacion.length; a++){
+    inflacionAnual+=inflacion[a]
+}
+print("Inflación Anual: "+inflacionAnual)
+
+print("Informar la inflación más baja junto con el número de mes")
+inflacionMin=inflacion[0]
+mesInflacionMin=0
+for(a=0; a<inflacion.length; a++){
+    if(inflacionMin>inflacion[a]){
+        inflacionMin=inflacion[a]
+        mesInflacionMin=a
+    }
+}
+print("Inflación Minima: "+inflacionMin+ ", mes: "+ (mesInflacionMin+1))
+inflacionMax=inflacion[0]
+mesInflacionMax=0
+for(a=0; a<inflacion.length; a++){
+    if (inflacionMax<inflacion[a]){
+        inflacionMax=inflacion[a]
+        mesInflacionMax=a
+    }
+}
+print("Inflacion Maxima: "+inflacionMax+", mes: "+(mesInflacionMax+1))
+
+print("Informar el promedio de inflación")
+print("Promedio de Inflación: "+inflacionAnual/12).toFixed(2)
+
+print("------ Ejercicio 3 --------")
+meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO",
+         "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+
+print("Inflacion Minima: "+ inflacionMin+ ", mes: "+(meses[mesInflacionMin]))
+print("Inflacion Maxima: "+ inflacionMax+ ", mes: "+ (meses[mesInflacionMax]))
+</script>
