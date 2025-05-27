@@ -1,0 +1,21 @@
+<!-- <script src="util.js"></script> -->
+<script src="https://crios2020.github.io/js/util.js"></script>
+<script src="js/funciones.js"></script>
+<script>
+
+        fecha = new Date()
+        diaMes = fecha.getDate()
+        diaSem = fecha.getDay()
+        temperatura = getTemperatura()
+        clima = getClima()
+
+        frase = "Hoy es " + diaSemana() + " " + diaMes + " de " + nombreMes() + ", en " + zonaHoraria() +
+                " la temperatura es " + temperatura + " grados centígrados, " +
+                "el tiempo está " + clima + ", " + sensacionTemperatura(temperatura) + " " +
+                momento() + ", estamos en " + estacion() + ", " + laboral() + " " +
+                situacionClima(temperatura, clima) + ", " + getFraseRandom()
+
+        document.writeln(frase)
+        hablar(frase)
+
+</script>
