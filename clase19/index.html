@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="icon" type="image/png" href="icons/book.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form>
+<table>
+        <tr><td>Nombre:</td></tr>
+        <tr><td><input type="text" required minlength="3" maxlength="25" placeholder="Ingrese su Nombre"></td></tr>
+        <tr><td>Apellido:</td></tr>
+        <tr><td><input type="text"></td></tr>
+        <tr><td>Edad:</td></tr>
+        <tr><td><input type="number" value="18" min="18" max="120"></td></tr>
+        <tr><td>Password:</td></tr>
+        <tr><td><input type="password" required minlength="3" maxlength="25" placeholder="Ingrese su Nombre"></td></tr>
+        <tr><td>Fecha de Nacimiento:</td></tr>
+        <tr><td><input type="date"></td></tr>
+        <tr><td>Email:</td></tr>
+        <tr><td><input type="email"></td></tr>
+        <tr><td>Estado Civil:</td>
+            <td>
+            <select>
+                <option>Soltero</option>
+                <option>Casado</option>
+                <option>Viudo</option>
+                <option>Divorciado</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Genero</td>
+            <td>
+                <input type="radio" name="genero" checked>Femenino<br>
+                <input type="radio" name="genero" checked>Masculino<br>
+                <input type="radio" name="genero" checked>X<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Vehiculo</td>
+            <td>
+                <input type="checkbox">Bicicleta<br>
+                <input type="checkbox">Mono Patín<br>
+                <input type="checkbox">Motocicleta<br>
+                <input type="checkbox">AutoMóvil<br>
+            </td>
+        </tr>
+         <tr>
+            <td>Comentarios</td>
+            <td><textarea title="Comentarios" rows="20" cols="40"></textarea></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="Borrar"></td>
+            <td><input type="submit" value="Enviar"></td>
+           
+        </tr>
+
+    
+    </table>
+    <!--
+      <form>
+        Nombre:<input type="text"><br>
+        Apellido:<input type="text"><br>
+        Edad:<input type="number"><br>
+    </form>
+    -->
+    </form>
+
+</body>
+</html>
