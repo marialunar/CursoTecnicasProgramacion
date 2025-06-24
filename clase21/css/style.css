@@ -1,0 +1,38 @@
+body{
+    background-color:bisque;
+    padding: 10px;
+}
+#logo{
+    margin: 10px;
+    text-align: center;
+    color: brown;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boton{
+    color: white;
+    opacity: 0.4;
+    width: 120px;
+    height: 30px;
+    padding: 8px;
+    margin: 5px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.boton:hover{
+    opacity: 1;
+}
+
+#rojo{
+    background-color: red;
+}
+
+#verde{
+    background-color: green;
+}
+
+#azul{
+    background-color: blue;
+}
