@@ -1,6 +1,21 @@
+function calcular() {
+    peso = parseFloat(document.getElementById("peso").value)
+    altura = parseFloat(document.getElementById("altura").value)
+
+    if (!peso || !altura || peso <= 0 || altura <= 0) {
+        document.getElementById("resultado").textContent = "Por favor, ingresa valores válidos.";
+        return;
+    }
+
+    imc = calcular_Masa_Corporal(peso, altura)
+    estado = obtener_Estado(imc)
+
+    document.getElementById("resultado").innerHTML =
+        `Su IMC es: ${imc.toFixed(2)}\nEstado: ${estado}`
+}
+
 function calcular_Masa_Corporal(peso, altura) {
-    imc = peso / (altura * altura)
-    return imc
+    return peso / (altura * altura)
 }
 
 function obtener_Estado(imc) {
