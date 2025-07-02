@@ -10,7 +10,7 @@ function calcular() {
     imc = calcular_Masa_Corporal(peso, altura)
     estado = obtener_Estado(imc)
 
-    document.getElementById("resultado").innerHTML =
+    document.getElementById("resultado").textContent =
         `Su IMC es: ${imc.toFixed(2)}\nEstado: ${estado}`
 }
 
